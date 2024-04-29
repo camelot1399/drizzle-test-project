@@ -5,8 +5,9 @@ export default {
   out: "./.drizzle/migrations",
   driver: "pg",
   dbCredentials: {
-    connectionString: "postgresql://camelot:drizzle@localhost/drizzle_db",
+    host: process.env.DB_HOST as string,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME as string,
   },
-  verbose: true,
-  strict: true,
 } satisfies Config;

@@ -1,0 +1,1 @@
+ALTER TABLE "oneTask"."users" ADD COLUMN "last_name" text;
